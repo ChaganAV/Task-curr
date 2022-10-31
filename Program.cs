@@ -1,19 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
     int countCurrent = 6; // размер массива
-    string[,] arrayCurr = new string [6,2] {
+    string[,] arrayCurr = new string [3,2] {
     {"USD", "Доллар США"},
     {"EUR", "Евро"},
-    {"CBP", "Фунт стерлинг Соединенного Королевства"},
-    {"CHF", "Швейцарский франк"},
-    {"JPY", "Японская иена"},
     {"RUB", "Российский рубль"}};
     
     // массив сумм
-    decimal[,] arraySum = new decimal [6,2] {{0,0},{1,0},{2,0},{3,0},{4,0},{5,0}};
+    decimal[,] arraySum = new decimal [3,2] {{0,61.3589M},{1,61.5718M},{2,1M}};
 
     Console.WriteLine("=== Конвертер валют ===");
-    SelectListCurrent(countCurrent, arrayCurr);
+    SelectListCurrent();
 
     string curr = ReadString("Введите валюту из предложенного списка");
     decimal sumCurr = Convert.ToDecimal(ReadString("И баланс валюты"));
@@ -28,10 +25,19 @@ string ReadString(string message)
     return inputLine ?? "no";
 }
 
-void SelectListCurrent(int countCurr, string[,] arrCurr)
+void SelectListCurrent()
 {
-    for (int i = 0; i < countCurr; i++)
+    for (int i = 0; i < countCurrent; i++)
     {
-        Console.WriteLine($"{arrCurr[i,0]} - {arrCurr[i,1]}");
+        Console.WriteLine($"{arrayCurr[i,0]} - {arrayCurr[i,1]}");
+    }
+}
+
+void PrintCurrent()
+{
+    Console.WriteLine("Курсы валют");
+    for (int i = 0; i < countCurrent; i++)
+    {
+        
     }
 }
