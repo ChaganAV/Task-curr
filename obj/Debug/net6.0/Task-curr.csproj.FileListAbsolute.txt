@@ -1,0 +1,15 @@
+C:\Projects\Code\Csharp\Task-curr\bin\Debug\net6.0\Task-curr.exe
+C:\Projects\Code\Csharp\Task-curr\bin\Debug\net6.0\Task-curr.deps.json
+C:\Projects\Code\Csharp\Task-curr\bin\Debug\net6.0\Task-curr.runtimeconfig.json
+C:\Projects\Code\Csharp\Task-curr\bin\Debug\net6.0\Task-curr.dll
+C:\Projects\Code\Csharp\Task-curr\bin\Debug\net6.0\Task-curr.pdb
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\Task-curr.csproj.AssemblyReference.cache
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\Task-curr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\Task-curr.AssemblyInfoInputs.cache
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\Task-curr.AssemblyInfo.cs
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\Task-curr.csproj.CoreCompileInputs.cache
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\Task-curr.dll
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\refint\Task-curr.dll
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\Task-curr.pdb
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\Task-curr.genruntimeconfig.cache
+C:\Projects\Code\Csharp\Task-curr\obj\Debug\net6.0\ref\Task-curr.dll
