@@ -2,9 +2,9 @@
 
     int countCurrent = 3; // размер массива
     string[,] arrayCurr = new string [3,2] {
-    {"0", "USD Доллар США"},
-    {"1", "EUR Евро"},
-    {"2", "RUB Российский рубль"}};
+    {"USD", "Доллар США"},
+    {"EUR", "Евро"},
+    {"RUB", "Российский рубль"}};
     string inputString = String.Empty;
     
     // массивы-хранилица сумм
@@ -35,6 +35,9 @@ void SelectComand(string comand)
         case "insert":
             InsertBalance();
             break;
+        case "conv":
+            ConverCurr();
+            break;
         case "help":
             PrintComands();
             break;
@@ -59,6 +62,7 @@ void PrintComands()
     Console.WriteLine("rate - курсы валют");
     Console.WriteLine("insert - внести баланс");
     Console.WriteLine("balance - печать баланса");
+    Console.WriteLine("conv - конвертировать одну валюту в другую");
     Console.WriteLine("help - справка по командам");
     Console.WriteLine("q - выход");
 }
@@ -80,26 +84,40 @@ void InsertBalance()
     {
            Decimal.TryParse(ReadString("Введите число"),out sumCurr);
     }
-    switch(curr)
-    {
-        case "USD":
-            arraySum[0,0] = arrayRate[0,0] * sumCurr;
-            break;
-        case "EUR":
-            arraySum[1,0] = arrayRate[1,0] * sumCurr;
-            break;
-        case "RUB":
-            arraySum[2,0] = arrayRate[2,0] * sumCurr;
-            break;
+    SumBalance(curr, sumCurr);
+}
 
+void SumBalance(string curr, decimal bal)
+{
+    for (int i = 0; i < arrayCurr.GetLength(0); i++)
+    {
+        if (arrayCurr[i,0] == curr)
+        {
+            arraySum[i,1] = bal;
+        }
     }
 }
 
-void SumBalance(string val)
+void ConverCurr()
 {
-
+    string curr1 = ReadString("Введите первую валюту");
+    string curr2 = ReadString("Введите вторую валюту");
+    decimal result = 0;
+    for(int i = 0; i < arrayCurr.GetLength(0); i++)
+    {
+        if (arrayCurr[i,0] == curr1)
+        {
+            for (int j = 0; j < arrayCurr.GetLength(0); j++)
+            {
+                if (arrayCurr[j,0] == curr2)
+                {
+                    result = arraySum[i,1]/arrayRate[i,1]*arrayRate[j,1];
+                    Console.WriteLine($"{arraySum[i,1]} {arrayRate[i,0]} = {result} {arrayRate[j,0]}");
+                }
+            }
+        }
+    }
 }
-
 void PrintBalance()
 {
     Console.WriteLine($"Ваш баланс на {DateTime.Now.Date}");
